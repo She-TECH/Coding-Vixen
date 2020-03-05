@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.healthin">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.flash"
-        android:required="false" />
-
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE"/>
+
+
+    <!--
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-feature tools:ignore="ExtraText">
+        android:name="android.hardware.camera"
+        android:required="true"
+    </uses-feature> -->
+  <!--  <uses-feature>
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"
+    </uses-feature>-->
+
 
     <application
         android:allowBackup="true"
@@ -31,12 +34,17 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
 
-        <activity android:name=".signup"/>
+        <!--<activity android:name=".signup"/> -->
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".CameraPhotoCapture">
+            <intent-filter>
+                <action android:name="CameraPhotoCapture" />
+            </intent-filter>
+        </activity>
 
           <service
               android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
