@@ -42,11 +42,11 @@ int i=0;
                 if (userid.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Enter userID", Toast.LENGTH_SHORT).show();
                 } else if(map.containsKey(userid.getText().toString())) {
-                    Toast.makeText(getApplicationContext(),userid.getText().toString(), Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(getApplicationContext(),userid.getText().toString(), Toast.LENGTH_SHORT).show();
 
                     Toast.makeText(getApplicationContext(), "Valid userID", Toast.LENGTH_SHORT).show();
-                        Intent launchactivity = new Intent(login.this, MainActivity.class);
-                        startActivity(launchactivity);
+                      Intent launchactivity = new Intent(login.this, CameraPhotoCapture.class);
+                      startActivity(launchactivity);
                     }
                 else {
                         Toast.makeText(getApplicationContext(),userid.getText().toString(), Toast.LENGTH_SHORT).show();

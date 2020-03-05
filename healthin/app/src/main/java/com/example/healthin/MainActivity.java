@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
     AmazonS3 s3Client;
     String bucket = "shetechimage";
-    File uploadToS3 = new File("/storage/emulated/0/DCIM/Camera/IMG_20190115_180108.jpg");
-    File downloadFromS3 = new File("/storage/emulated/0/DCIM/Camera");
+    //File uploadToS3 = new File("/storage/emulated/0/DCIM/Camera/IMG_20190115_180108.jpg");
+    //File downloadFromS3 = new File("/storage/emulated/0/DCIM/Camera");
     TransferUtility transferUtility;
     List<String> listing;
     CognitoCachingCredentialsProvider credentialsProvider;
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         credentialsProvider = new CognitoCachingCredentialsProvider(
                 getApplicationContext(),
-                "ap-south-1:9e3b8bda-5eaa-4167-8541-794cceccacee", // Identity pool ID
+                "ap-southeast-1:88395f09-58a8-4e8c-a81e-8452802b9c0a", // Identity pool ID
                 Regions.AP_SOUTHEAST_1 // Region
         );
     }
